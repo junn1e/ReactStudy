@@ -1,0 +1,113 @@
+.board {
+  width: 80%;
+  margin-left: 5%;
+  text-align: center;
+  color: var(--text);
+}
+
+/*목차*/
+.header {
+  width: 1000px; /*스크롤 부분 제외 헤더 너비*/
+  cursor: default;
+  padding: 12px;
+  color: var(--textDark);
+  border-bottom: 1px solid var(--light);
+}
+.header th:nth-child(1) {width: 18%;}
+.header th:nth-child(2) {width: 74%;}
+.header th:nth-child(3) {width: 8%;}
+
+/*스크롤*/
+.scrollContainer {
+  max-width: 1020px;
+  height: 300px;
+  overflow-y: auto;
+}
+.scrollContainer::-webkit-scrollbar {
+  width: 16px;
+}
+.scrollContainer::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--darkLight);
+}
+.scrollContainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--light);
+}
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+  background: #414855;
+}
+
+/*표*/
+.table {
+  width: 1000px;
+  background-color: var(--darkLight);
+}
+.table td {
+  padding: 10px;
+  cursor: default;
+}
+.table td:nth-child(1) {width: 20%;}
+.table td:nth-child(2) {
+  text-align: left; 
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 0px; 
+}
+.table td:nth-child(3) {width: 10%; color: var(--textDark);}
+.table tr:hover {
+  color: var(lightText);
+  background-color: var(--light);
+}
+
+/*버튼 영역*/
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 1000px;
+}
+
+/*페이지 버튼*/
+.pageButton {
+  display: flex;
+  justify-content: flex-start;
+  width: 89.8%;
+}
+.pageButton button {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 6px 20px;
+  border: none;
+}
+.pageButton button:disabled {   /*현재 페이지*/
+  color: var(--dark);
+  background-color: var(--light);
+}
+.pageButton button:enabled {    /*그 외*/
+  cursor: pointer;
+  color: var(--lightDark);
+  background-color: var(--darkLight);
+}
+.pageButton button:hover {
+  color: var(--text);
+  background-color: var(--light);
+}
+
+/*글쓰기 버튼*/
+.postWritePageButton {
+  justify-content: flex-end; 
+  font-weight: bold;
+  font-size: 20px;
+  padding: 6px 20px;
+  border: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  color: var(--textDark);
+  background-color: var(--darkLight);
+}
+.postWritePageButton:hover{
+  cursor: pointer;
+  background-color: var(--light);
+  color: var(--text);
+}
