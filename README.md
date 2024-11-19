@@ -1,2 +1,2 @@
 # ReactStudy
-2-2. javascript(react)
+2-2. jsx / css
